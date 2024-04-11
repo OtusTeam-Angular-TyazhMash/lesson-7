@@ -1,0 +1,17 @@
+<h3>app-setters-optimization</h3>
+<table *ngIf="data.length; else emptyRef">
+  <thead>
+    <th *ngFor="let col of columns">{{ col }}</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of data">
+      <td *ngFor="let col of columns">
+        {{ row[col] }}
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<ng-template #emptyRef>
+  <p>set data for work</p>
+</ng-template>
